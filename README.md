@@ -1,34 +1,51 @@
-# 🖥️ Windows Server Home Lab — Infrastructure & Network Documentation
+# 🖥️ Windows Server & Endpoint Administration — Home Lab Documentation
 
-Repositori ini berisi dokumentasi praktik mandiri dalam membangun, mengonfigurasi, dan mengelola lingkungan jaringan **Server–Client** menggunakan **Oracle VM VirtualBox**.
+Repositori ini berisi dokumentasi praktik mandiri dalam membangun, mengelola, dan melakukan *troubleshooting* lingkungan jaringan **Server–Client** menggunakan **Windows Server** pada **Oracle VM VirtualBox**.
 
 ---
 
 ## ⚙️ Spesifikasi Lingkungan Virtual (Lab Environment)
 * **Hypervisor:** Oracle VM VirtualBox
-* **OS Server:** Windows Server (Domain Controller, DHCP, & File Server)
+* **OS Server:** Windows Server (Domain Controller, DHCP, GPO, & SMB File Server)
 * **OS Client:** Windows 10 / 11 Pro
-* **Topologi Jaringan:** Internal Network (Static IP pada Server & Dynamic DHCP pada Client)
+* **Fokus Kompetensi:** Active Directory, Group Policy, Network File Sharing, Endpoint Troubleshooting & Firewall
 
 ---
 
 ## 1. Administrasi Active Directory (OU) & DHCP Server
-* Membuat **Organizational Unit (OU)** untuk mengelompokkan akun pengguna dan perangkat berdasarkan divisi kerja secara terpusat.
-* Mengonfigurasi **DHCP Scope (Address Pool)** untuk mendistribusikan alamat IP secara otomatis ke perangkat Client yang terhubung ke jaringan lokal.
+* **Skenario Industri:** Mengelola akun pengguna dan komputer karyawan secara terpusat berdasarkan divisi menggunakan *Organizational Unit (OU)* serta mendistribusikan IP Address otomatis ke perangkat Client melalui layanan DHCP Server.
 
 ![Active Directory dan DHCP](server-ad-dhcp.png)
 
 ---
 
 ## 2. Pengujian Konektivitas Jaringan Dua Arah (ICMP Ping)
-* Memastikan komunikasi antara **Windows Server** dan **Client** berjalan lancar tanpa *packet loss* (`0% loss`) melalui pengujian `ping` dua arah di Command Prompt.
+* **Skenario Industri:** Memverifikasi komunikasi jaringan antara Windows Server dan komputer Client menggunakan protokol ICMP (`ping`) di Command Prompt dengan hasil `0% packet loss`.
 
 ![Uji Koneksi Ping Server Client](jaringan-ping.png)
 
 ---
 
-## 3. Centralized Software Deployment (File Server SMB — MS Office)
-* **Studi Kasus Efisiensi IT Support:** Agar tidak perlu mengunduh ulang atau menyalin file *installer* menggunakan *flashdisk* satu per satu ke setiap komputer karyawan, Windows Server dikonfigurasi sebagai **File Server (Shared Folder)**.
-* **Implementasi:** Menyimpan file instalasi **Microsoft Office** di dalam *shared directory* pada Server, mengatur izin akses (*Read/Execute Permissions*), dan mengeksekusi instalasi langsung dari komputer Client melalui jalur jaringan lokal (`\\IP-Server\Software\Office`).
+## 3. Centralized Software Deployment (SMB File Server — MS Office)
+* **Skenario Industri:** Menyediakan *Shared Folder* terpusat pada Windows Server sebagai wadah penyimpanan *installer* aplikasi (**Microsoft Office**), sehingga tim IT Support dapat menjalankan instalasi langsung dari komputer Client melalui jaringan lokal (`\\IP-Server\Software`) tanpa perlu menggunakan *flashdisk* di setiap perangkat.
+* **Perintah & Konfigurasi:** Pengaturan *SMB Sharing Permissions* & *NTFS Security* (Read & Execute).
 
-*(Dokumentasi tangkapan layar instalasi via Network Share sedang dalam tahap pembaruan)*
+<!-- Besok setelah upload gambar bernama fileshare-office.png, hapus tanda panah komentar di baris bawah ini: -->
+<!-- ![File Server MS Office](fileshare-office.png) -->
+
+---
+
+## 4. Penerapan Kebijakan Terpusat dengan Group Policy Objects (GPO)
+* **Skenario Industri:** Menerapkan standarisasi keamanan dan pembatasan akses pada komputer karyawan secara massal dari sisi Server menggunakan **Group Policy Management** (seperti pembatasan akses *Control Panel* atau kebijakan keamanan akun) yang dihubungkan langsung ke *Organizational Unit (OU)*.
+* **Perintah Verifikasi di Client:** `gpupdate /force` dan `gpresult /r`.
+
+<!-- Besok setelah upload gambar bernama gpo-policy.png, hapus tanda panah komentar di baris bawah ini: -->
+<!-- ![Konfigurasi Group Policy Objects](gpo-policy.png) -->
+
+---
+
+## 5. Investigasi System Logs (Event Viewer) & Konfigurasi Windows Firewall
+* **Skenario Industri:** Melacak penyebab *error* aplikasi, kegagalan layanan (*service*), maupun riwayat keamanan pada sistem operasi menggunakan **Windows Event Viewer** (*System & Application Logs*), serta mengatur aturan keluar-masuk trafik port pada **Windows Defender Firewall with Advanced Security**.
+
+<!-- Besok setelah upload gambar bernama event-viewer-firewall.png, hapus tanda panah komentar di baris bawah ini: -->
+<!-- ![Event Viewer dan Windows Firewall](event-viewer-firewall.png) -->
