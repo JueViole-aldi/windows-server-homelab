@@ -23,7 +23,7 @@ Repositori ini berisi dokumentasi praktik mandiri dalam membangun, mengelola, da
 * **Skenario Industri:** Mengonfigurasi **DHCP Scope (IPv4 Address Pool)**, *Default Gateway*, dan *DNS Server* pada Windows Server agar komputer Client di jaringan lokal mendapatkan alamat IP secara otomatis (*Address Leases*).
 
 > 📸 **Slot Screenshot DHCP Server:** Upload gambar dengan nama `dhcp-server.png`, lalu hapus tanda `<!--` dan `-->` di bawah ini.
-<!-- ![Konfigurasi DHCP Server](dhcp-server.png) -->
+[Konfigurasi DHCP Server](dhcp-server.png)
 
 ---
 
