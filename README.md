@@ -34,7 +34,7 @@ Repositori ini berisi dokumentasi praktik mandiri dalam membangun, mengelola, da
 ![Uji Koneksi Ping dari Server ke Client](jaringan-ping.png)
 
 ### 3B. Uji Ping dari Client ke Server
-> 📸 **Slot Screenshot Ping Client ke Server:** Upload gambar dengan nama `ping-client-ke-server.png`, lalu hapus tanda `<!--` dan `-->` di bawah ini.
+> 📸 **Slot Screenshot Ping Client ke Server:** 
 <!-- ![Uji Koneksi Ping dari Client ke Server](ping-client-ke-server.png) -->
 
 ---
