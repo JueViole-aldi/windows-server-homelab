@@ -28,9 +28,14 @@ Repositori ini berisi dokumentasi praktik mandiri dalam membangun, mengelola, da
 ---
 
 ## 3. Pengujian Konektivitas Jaringan Dua Arah (ICMP Ping)
-* **Skenario Industri:** Memverifikasi komunikasi jaringan antara Windows Server dan komputer Client menggunakan protokol ICMP (`ping`) di Command Prompt dengan hasil `0% packet loss`.
+* **Skenario Industri:** Memverifikasi komunikasi jaringan timbal balik antara **Windows Server** dan komputer **Client** menggunakan protokol ICMP (`ping`) di Command Prompt dengan hasil `0% packet loss`.
 
-![Uji Koneksi Ping Server Client](jaringan-ping.png)
+### 3A. Uji Ping dari Server ke Client (`192.168.100.11`)
+![Uji Koneksi Ping dari Server ke Client](jaringan-ping.png)
+
+### 3B. Uji Ping dari Client ke Server
+> 📸 **Slot Screenshot Ping Client ke Server:** Upload gambar dengan nama `ping-client-ke-server.png`, lalu hapus tanda `<!--` dan `-->` di bawah ini.
+<!-- ![Uji Koneksi Ping dari Client ke Server](ping-client-ke-server.png) -->
 
 ---
 
