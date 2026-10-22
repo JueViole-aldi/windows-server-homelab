@@ -31,11 +31,11 @@ Repositori ini berisi dokumentasi praktik mandiri dalam membangun, mengelola, da
 * **Skenario Industri:** Memverifikasi komunikasi jaringan timbal balik antara **Windows Server** dan komputer **Client** menggunakan protokol ICMP (`ping`) di Command Prompt dengan hasil `0% packet loss`.
 
 ### 3A. Uji Ping dari Server ke Client (`192.168.100.11`)
-![Uji Koneksi Ping dari Server ke Client](jaringan-ping.png)
+[Uji Koneksi Ping dari Server ke Client](jaringan-ping.png)
 
 ### 3B. Uji Ping dari Client ke Server
 > 📸 **Slot Screenshot Ping Client ke Server:** 
-<!-- ![Uji Koneksi Ping dari Client ke Server](ping-client-ke-server.png) -->
+[Uji Koneksi Ping dari Client ke Server](ping-client-ke-server.png) -->
 
 ---
 
