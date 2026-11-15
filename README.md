@@ -14,7 +14,8 @@ Repositori ini berisi dokumentasi praktik mandiri dalam membangun, mengelola, da
 ![Struktur Organizational Unit Active Directory](server-ad-dhcp.png)
 
 ## 2. Konfigurasi Layanan DHCP Server (Dynamic IP Distribution)
-- **Skenario Industri:** Mengonfigurasi **DHCP Scope (IPv4 Address Pool)**, *Default Gateway*, dan *DNS Server* pada Windows Server (`dhcpmgmt.msc`) agar komputer Client di jaringan lokal mendapatkan alamat IP secara otomatis (*Address Leases*).
+- **Skenario Industri:** Mengonfigurasi **DHCP Scope (IPv4 Address Pool `.10` - `.100`)**, *Default Gateway*, dan *DNS Server* pada Windows Server (`dhcpmgmt.msc`) agar komputer Client mendapatkan alamat IP secara otomatis (*Address Leases*).
+- **Catatan Troubleshooting (Rogue DHCP & IP Conflict):** Mengisolasi *Network Adapter* ke jalur *Internal Network* dan melakukan pembaruan *lease* (`ipconfig /release` & `ipconfig /renew`) untuk mencegah tabrakan distribusi IP dengan *router* eksternal.
 
 ![Konfigurasi DHCP Server](dhcp-server.png)
 
