@@ -44,7 +44,7 @@ Repositori ini berisi dokumentasi praktik mandiri dalam membangun, mengelola, da
 - **Skenario Industri:** Melacak penyebab *error* aplikasi maupun layanan sistem operasi menggunakan **Windows Event Viewer** (`eventvwr.msc`), serta mengatur aturan keluar-masuk trafik *port* pada **Windows Defender Firewall with Advanced Security** (`wf.msc`).
 
 ### 6A. Audit Log Sistem melalui Windows Event Viewer
-![Investigasi Log di Windows Event Viewer](event-viewer.png)
+![Investigasi Log di Windows Event Viewer](event-viwer.png)
 
 ### 6B. Konfigurasi Inbound & Outbound Rules pada Windows Firewall
 ![Aturan Inbound Outbound Windows Firewall](windows-firewall.png)
