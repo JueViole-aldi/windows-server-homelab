@@ -28,9 +28,9 @@ Repositori ini berisi dokumentasi praktik mandiri dalam membangun, mengelola, da
 ### 3B. Uji Ping dari Client ke Server (`192.168.100.10`)
 ![Uji Koneksi Ping dari Client ke Server](ping-client-ke-server.png)
 
-## 4. Centralized Software Deployment (SMB File Server — MS Office)
-- **Skenario Industri:** Menyediakan *Shared Folder* terpusat pada Windows Server sebagai wadah penyimpanan *installer* aplikasi (**Microsoft Office**), sehingga tim IT Support dapat menjalankan instalasi langsung dari komputer Client melalui jaringan lokal tanpa perlu menggunakan *flashdisk* di setiap perangkat.
-- **Konfigurasi & Verifikasi:** Pengaturan *SMB Sharing Permissions*, *NTFS Security* (Read & Execute), serta verifikasi koneksi via `net use`.
+## 4. Centralized Software Deployment (SMB File Server — MS Office LTSC 2021)
+- **Skenario Industri:** Menyediakan *Shared Folder* terpusat pada Windows Server (`\\192.168.100.10\Software`) sebagai wadah distribusi *installer* **Microsoft Office LTSC 2021**, sehingga tim IT Support dapat mengeksekusi instalasi langsung di komputer Client melalui jaringan lokal tanpa menggunakan *flashdisk* di setiap perangkat.
+- **Konfigurasi & Otomatisasi:** Pengaturan *SMB Sharing Permissions*, *NTFS Security* (Read & Execute), pemetaan *Network Drive* (`net use Z:`), serta otomatisasi instalasi menggunakan **Office Deployment Tool (`setup.exe` & `Configuration.xml`)** yang dieksekusi melalui *Batch Script* (`Install_Office_LTSC.bat`).
 
 ![File Server MS Office](fileshare-office.png)
 
